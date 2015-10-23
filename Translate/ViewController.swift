@@ -22,13 +22,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 100/255, green: 250/255, blue: 100/255, alpha: 0.3)
+        
+        
         
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
         
         // Input data into the Array:
-        pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+        pickerData = ["English", "French", "Turkish", "Gaelic"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,6 +54,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData[row]
     }
     
+    // Capture the picker view selection
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+    }
     
     
     @IBAction func translate(sender: AnyObject) {
@@ -74,15 +82,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         indicator.startAnimating()
         
         var result = "<Translation Error>"
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
