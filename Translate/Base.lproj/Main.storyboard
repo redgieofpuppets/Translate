@@ -39,7 +39,13 @@
                                 <rect key="frame" x="268" y="550" width="64" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translate:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BPm-9j-AYT"/>
+                                </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-RV-63D">
+                                <rect key="frame" x="7" y="318" width="600" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -53,10 +59,33 @@
                             <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="MIQ-RV-63D" id="Vya-Uh-amN"/>
+                        <outlet property="textToTranslate" destination="dii-Vg-90N" id="056-S2-9vY"/>
+                        <outlet property="translatedText" destination="LaV-KV-DTJ" id="ZEf-qx-rD3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="333" y="389"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="goA-gW-8P1">
+            <objects>
+                <viewController id="vax-9m-OBQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ASo-hW-HkD"/>
+                        <viewControllerLayoutGuide type="bottom" id="i28-ua-vx0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2s5-Sy-iAf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9F-v0-XC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="icN-Yc-oDu"/>
+            </objects>
         </scene>
     </scenes>
 </document>
