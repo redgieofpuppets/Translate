@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4B587E11BE78312004B2BF9 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E01BE78312004B2BF9 /* button.jpg */; settings = {ASSET_TAGS = (); }; };
+		D4B587E51BE78562004B2BF9 /* button2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E41BE78562004B2BF9 /* button2.jpg */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4B587E01BE78312004B2BF9 /* button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button.jpg; path = ../../button.jpg; sourceTree = "<group>"; };
+		D4B587E41BE78562004B2BF9 /* button2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button2.jpg; path = ../button2.jpg; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				D4B587E41BE78562004B2BF9 /* button2.jpg */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,
 				FFD2F9B41BD1101A00F54057 /* Products */,
 			);
@@ -57,6 +62,7 @@
 				FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */,
 				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
+				D4B587E01BE78312004B2BF9 /* button.jpg */,
 				FFD2F9BD1BD1101A00F54057 /* Assets.xcassets */,
 				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
@@ -122,6 +128,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
+				D4B587E11BE78312004B2BF9 /* button.jpg in Resources */,
+				D4B587E51BE78562004B2BF9 /* button2.jpg in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
 			);
@@ -285,6 +293,7 @@
 				FFD2F9C71BD1101A00F54057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

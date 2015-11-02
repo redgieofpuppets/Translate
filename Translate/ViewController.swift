@@ -22,16 +22,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 100/255, green: 250/255, blue: 100/255, alpha: 0.3)
-        
-        
+        self.view.backgroundColor = UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 0.3)
         
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
         
         // Input data into the Array:
-        pickerData = ["English", "French", "Turkish", "Gaelic"]
+        pickerData = ["French", "Turkish", "Gaelic"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,6 +65,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        //let langStr2 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        //let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
@@ -76,7 +76,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         //var data = NSMutableData()var data = NSMutableData()
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         indicator.center = view.center
         view.addSubview(indicator)
         indicator.startAnimating()
