@@ -12,13 +12,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
+    @IBOutlet weak var pickerSelection: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     
     //var data = NSMutableData()
-    var pickerData: [String] = [String]()
-    var colors = ["Red","Yellow","Green","Blue"]
+    var languages = ["French","Irish","Turkish"]
     
     override func viewDidLoad() {
+        pickerSelection.text = "French"
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 0.3)
@@ -27,13 +28,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        // Input data into the Array:
-        pickerData = ["French", "Turkish", "Gaelic"]
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true); super.touchesBegan(touches, withEvent: event)
+        
     }
     
     // The number of columns of data
@@ -43,32 +50,31 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return languages.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return colors[row]
+        return languages[row]
     }
     
     // Capture the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
+        
+        pickerSelection.text = languages[row]
+        
         if(row == 0)
         {
-            self.view.backgroundColor = UIColor.whiteColor();
+         
         }
         else if(row == 1)
         {
-            self.view.backgroundColor = UIColor.redColor();
-        }
-        else if(row == 2)
-        {
-            self.view.backgroundColor =  UIColor.greenColor();
+            
         }
         else
         {
-            self.view.backgroundColor = UIColor.blueColor();
+            
         }
     }
     
@@ -77,8 +83,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        var langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
-        let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        if(pickerSelection.text == "French")
+        {
+            langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        else if(pickerSelection.text == "Irish")
+        {
+            langStr = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        else
+        {
+             langStr = ("en|tr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        }
+        
+        
+       
         //let langStr2 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         //let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         

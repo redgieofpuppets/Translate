@@ -25,6 +25,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SIi-pj-gyq"/>
+                                </connections>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
                                 <rect key="frame" x="20" y="187" width="560" height="128"/>
@@ -52,6 +55,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2qf-9e-MTQ"/>
                                 </connections>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-Ye-LAQ">
+                                <rect key="frame" x="255" y="157" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QiY-WS-jSl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -69,6 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="picker" destination="MIQ-RV-63D" id="Vya-Uh-amN"/>
+                        <outlet property="pickerSelection" destination="Yxg-Ye-LAQ" id="WBB-6L-oZS"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="056-S2-9vY"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="ZEf-qx-rD3"/>
                     </connections>
