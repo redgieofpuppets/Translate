@@ -16,8 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //var data = NSMutableData()
     var pickerData: [String] = [String]()
-    
-    
+    var colors = ["Red","Yellow","Green","Blue"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,18 +43,33 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return colors.count
     }
     
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return colors[row]
     }
     
     // Capture the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(row == 0)
+        {
+            self.view.backgroundColor = UIColor.whiteColor();
+        }
+        else if(row == 1)
+        {
+            self.view.backgroundColor = UIColor.redColor();
+        }
+        else if(row == 2)
+        {
+            self.view.backgroundColor =  UIColor.greenColor();
+        }
+        else
+        {
+            self.view.backgroundColor = UIColor.blueColor();
+        }
     }
     
     
