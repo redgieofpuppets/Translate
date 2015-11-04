@@ -47,7 +47,10 @@
                             </button>
                             <pickerView contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-RV-63D">
                                 <rect key="frame" x="133" y="354" width="334" height="146"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zX8-As-vDT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2qf-9e-MTQ"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
