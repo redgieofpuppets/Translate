@@ -64,18 +64,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         pickerSelection.text = languages[row]
         
-        if(row == 0)
-        {
-         
-        }
-        else if(row == 1)
-        {
-            
-        }
-        else
-        {
-            
-        }
     }
     
     
