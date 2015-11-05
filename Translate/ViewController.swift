@@ -16,6 +16,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerSelection: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     
+    
+    //this takes the text from the translated box and turns it to speech
     @IBAction func textToSpeech(sender: UIButton) {
         myUtterance = AVSpeechUtterance(string: textView.text)
         myUtterance.rate = 0.3
@@ -24,24 +26,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var textView: UITextView!
     
+    //synth holds a reference to an AVSpeechSynthesizer instance
+    //myUtterance holds the string to turn into speech
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
-    //var data = NSMutableData()
     var languages = ["French","Irish","Turkish"]
     
     override func viewDidLoad() {
+        //Set the default language to french
         pickerSelection.text = "French"
         super.viewDidLoad()
         
+        //Sets the background color
         self.view.backgroundColor = UIColor(red: 50/255, green: 100/255, blue: 160/255, alpha: 0.3)
         
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        textToTranslate.layer.cornerRadius = 5.0;
-        translatedText.layer.cornerRadius = 5.0;
+        //Rounds the corners of the text boxes
+        textToTranslate.layer.cornerRadius = 6.0;
+        translatedText.layer.cornerRadius = 6.0;
         
         
     }
@@ -53,7 +59,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true); super.touchesBegan(touches, withEvent: event)
-        
+        //To dismiss the keyboard
     }
     
     // The number of columns of data
@@ -71,6 +77,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return languages[row]
     }
     
+    //Sets the font size, font and text color.
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = languages[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 16.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
