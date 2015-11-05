@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D41BF4961BEBCAC90026E3CB /* translate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D41BF4951BEBCAC90026E3CB /* translate.jpg */; settings = {ASSET_TAGS = (); }; };
+		D41BF49A1BEBD97D0026E3CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41BF4991BEBD97D0026E3CB /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D4B587E11BE78312004B2BF9 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E01BE78312004B2BF9 /* button.jpg */; settings = {ASSET_TAGS = (); }; };
 		D4B587E51BE78562004B2BF9 /* button2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E41BE78562004B2BF9 /* button2.jpg */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		D41BF4951BEBCAC90026E3CB /* translate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = translate.jpg; path = ../translate.jpg; sourceTree = "<group>"; };
+		D41BF4991BEBD97D0026E3CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D4B587E01BE78312004B2BF9 /* button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button.jpg; path = ../../button.jpg; sourceTree = "<group>"; };
 		D4B587E41BE78562004B2BF9 /* button2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button2.jpg; path = ../button2.jpg; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41BF49A1BEBD97D0026E3CB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				D41BF4991BEBD97D0026E3CB /* AVFoundation.framework */,
 				D41BF4951BEBCAC90026E3CB /* translate.jpg */,
 				D4B587E41BE78562004B2BF9 /* button2.jpg */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,

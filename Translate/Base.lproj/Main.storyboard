@@ -64,6 +64,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vi0-b5-2u4">
+                                <rect key="frame" x="236" y="491" width="64" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Button" image="button.jpg"/>
+                                <connections>
+                                    <action selector="textToSpeech:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87R-vY-RDM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -71,6 +79,7 @@
                         <outlet property="picker" destination="MIQ-RV-63D" id="Vya-Uh-amN"/>
                         <outlet property="pickerSelection" destination="Yxg-Ye-LAQ" id="WBB-6L-oZS"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="056-S2-9vY"/>
+                        <outlet property="textView" destination="LaV-KV-DTJ" id="QrN-kf-MOL"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="ZEf-qx-rD3"/>
                     </connections>
                 </viewController>
@@ -95,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button.jpg" width="570" height="570"/>
         <image name="button2.jpg" width="98" height="50"/>
     </resources>
 </document>

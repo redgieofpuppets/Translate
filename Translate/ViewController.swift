@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
@@ -14,6 +15,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var pickerSelection: UITextField!
     @IBOutlet weak var picker: UIPickerView!
+    
+    @IBAction func textToSpeech(sender: UIButton) {
+        myUtterance = AVSpeechUtterance(string: textView.text)
+        myUtterance.rate = 0.3
+        synth.speakUtterance(myUtterance)
+    }
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
     
     //var data = NSMutableData()
     var languages = ["French","Irish","Turkish"]
