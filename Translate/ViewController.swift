@@ -22,13 +22,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerSelection.text = "French"
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 0.3)
+        self.view.backgroundColor = UIColor(red: 50/255, green: 100/255, blue: 160/255, alpha: 0.3)
         
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        
+        textToTranslate.layer.cornerRadius = 5.0;
+        translatedText.layer.cornerRadius = 5.0;
         
         
     }
@@ -58,6 +59,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return languages[row]
     }
     
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = languages[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 16.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        return myTitle
+    }
     // Capture the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
@@ -87,9 +93,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         
-       
-        //let langStr2 = ("en|ga").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        //let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         let urlStr:String = ("http://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
@@ -97,7 +100,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         let request = NSURLRequest(URL: url!)// Creating Http Request
         
-        //var data = NSMutableData()var data = NSMutableData()
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         indicator.center = view.center

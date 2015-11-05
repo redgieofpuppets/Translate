@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Translate" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
-                                <rect key="frame" x="20" y="28" width="560" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" textAlignment="natural" id="dii-Vg-90N">
+                                <rect key="frame" x="20" y="33" width="280" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="YTh-GD-fJj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SIi-pj-gyq"/>
                                 </connections>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
-                                <rect key="frame" x="20" y="187" width="560" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" id="LaV-KV-DTJ">
+                                <rect key="frame" x="20" y="209" width="280" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="0Qw-rW-jUo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk9-7M-DEK" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="255" y="514" width="90" height="78"/>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tk9-7M-DEK" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="115" y="477" width="90" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Translate" image="button2.jpg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -48,35 +40,32 @@
                                     <action selector="translate:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BPm-9j-AYT"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-RV-63D">
-                                <rect key="frame" x="133" y="354" width="334" height="146"/>
+                            <pickerView contentMode="center" id="MIQ-RV-63D">
+                                <rect key="frame" x="90" y="339" width="141" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="zX8-As-vDT"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2qf-9e-MTQ"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-Ye-LAQ">
-                                <rect key="frame" x="255" y="157" width="90" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="16" id="Yxg-Ye-LAQ">
+                                <rect key="frame" x="115" y="171" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="QiY-WS-jSl"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cpZ-C3-3Wi">
+                                <rect key="frame" x="146" y="511" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="leading" secondItem="dii-Vg-90N" secondAttribute="leading" id="1I9-UQ-zeR"/>
-                            <constraint firstItem="MIQ-RV-63D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="113" id="6ff-Zh-Yvh"/>
-                            <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8IO-Lz-JKE"/>
-                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUW-Qr-ubm"/>
-                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="31" id="LTD-OY-g8P"/>
-                            <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="20" symbolic="YES" id="P4Z-UM-mZY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MIQ-RV-63D" secondAttribute="trailing" constant="113" id="S7a-lO-stR"/>
-                            <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dYF-2W-FQ1"/>
-                            <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="LaV-KV-DTJ" secondAttribute="trailing" id="l4y-8y-Mw1"/>
-                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="centerX" secondItem="Tk9-7M-DEK" secondAttribute="centerX" id="nxZ-oD-Bjx"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="picker" destination="MIQ-RV-63D" id="Vya-Uh-amN"/>
@@ -87,18 +76,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="405" y="305"/>
+            <point key="canvasLocation" x="216" y="288"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="goA-gW-8P1">
             <objects>
                 <viewController id="vax-9m-OBQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ASo-hW-HkD"/>
-                        <viewControllerLayoutGuide type="bottom" id="i28-ua-vx0"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2s5-Sy-iAf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -106,7 +91,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9F-v0-XC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="icN-Yc-oDu"/>
             </objects>
-            <point key="canvasLocation" x="446" y="1060"/>
+            <point key="canvasLocation" x="237.86666666666667" y="1003.4666666666667"/>
         </scene>
     </scenes>
     <resources>
