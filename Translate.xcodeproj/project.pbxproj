@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41BF4961BEBCAC90026E3CB /* translate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D41BF4951BEBCAC90026E3CB /* translate.jpg */; settings = {ASSET_TAGS = (); }; };
 		D4B587E11BE78312004B2BF9 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E01BE78312004B2BF9 /* button.jpg */; settings = {ASSET_TAGS = (); }; };
 		D4B587E51BE78562004B2BF9 /* button2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B587E41BE78562004B2BF9 /* button2.jpg */; settings = {ASSET_TAGS = (); }; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41BF4951BEBCAC90026E3CB /* translate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = translate.jpg; path = ../translate.jpg; sourceTree = "<group>"; };
 		D4B587E01BE78312004B2BF9 /* button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button.jpg; path = ../../button.jpg; sourceTree = "<group>"; };
 		D4B587E41BE78562004B2BF9 /* button2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button2.jpg; path = ../button2.jpg; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,7 @@
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				D41BF4951BEBCAC90026E3CB /* translate.jpg */,
 				D4B587E41BE78562004B2BF9 /* button2.jpg */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,
 				FFD2F9B41BD1101A00F54057 /* Products */,
@@ -129,6 +132,7 @@
 			files = (
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
 				D4B587E11BE78312004B2BF9 /* button.jpg in Resources */,
+				D41BF4961BEBCAC90026E3CB /* translate.jpg in Resources */,
 				D4B587E51BE78562004B2BF9 /* button2.jpg in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
